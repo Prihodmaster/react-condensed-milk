@@ -6,6 +6,7 @@ import MilkListHeader from './Components/MilkListHeader';
 import Overlay from './Components/Overlay';
 import Favorites from './Components/Favorites';
 import Purchase from './Components/Purchase';
+import Slider from './Components/Slider';
 
 
 const milkItems = [
@@ -253,6 +254,7 @@ function App() {
             {
               homeVisible && 
               <div className="wrapper-list">
+                <Slider />
                 <MilkListHeader inputValue={inputText}/>
                 <div className="milk-list">
                   {
