@@ -15,7 +15,7 @@ function Purchase(props){
                     <div className="milk-list-header">
                         <div className="milk-list-text">
                             <button onClick={()=>props.onOpenHome(true)}>⮜</button>
-                            <h2> Избранные товары</h2>
+                            <h2> Товары в корзине</h2>
                         </div>
                     </div>
                     <div className="milk-list">
