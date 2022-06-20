@@ -3,8 +3,8 @@ import CartMilkItem from './CartMilkItem';
 
 function Overlay(props){
     return(
-    <div className="overlay">
-        <div className="wrapper-cart">
+    <div className="overlay" style={{visibility: `${props.cartVisible ? '' : 'hidden'}`}}>
+        <div className="wrapper-cart" style={{transform: `${props.cartVisible ? 'translateX(0)' : 'translateX(100%)'}`}}>
           <div className="cart">
           <div className='cart-header'>
             <p>Корзина</p>
@@ -28,7 +28,7 @@ function Overlay(props){
                   <img src="/images/cart-empty.png" alt="лого" />
                   <p><b>Корзина пустая</b></p>
                   <p>Добавьте хотя бы одну баночку сгущёнки, чтобы сделать заказ</p>
-                  <button onClick={()=>props.onCloseCart(false)}>⮜ Вернуться назад</button>
+                  <button onClick={()=>props.onCloseCart(false)}> Вернуться назад</button>
                 </div>
                 :
                 <>
@@ -37,8 +37,7 @@ function Overlay(props){
                   </div>
                   <div className='cart-order'>
                     <div className='cart-order-text'><p>Общая сумма:</p><b>{props.sum} грн.</b></div>
-                    {/* <button onClick={props.clearCart}>Оформить заказ ⮞</button> */}
-                    <button onClick={props.clearCart}>Оформить заказ ⮞</button>
+                    <button onClick={props.clearCart}>Оформить заказ</button>
                   </div>
                 </>
               )

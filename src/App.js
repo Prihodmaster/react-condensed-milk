@@ -238,7 +238,6 @@ function App() {
 
   return (
       <div className="App">
-        {CartVisible && 
         <Overlay 
         data={cartItemList} 
         clickRemove={removeCartItem} 
@@ -247,7 +246,8 @@ function App() {
         clearCart={clearCart} 
         order={order}
         orderChange={orderChange}
-        />}
+        cartVisible={CartVisible}
+        />
         <div className='wrapper-main'>
           <Header onOpenCart={openCart} onOpenFavorites={openFavorites} onOpenPurchase={openPurchase} onOpenHome={openHome} sum={sumCartValue} />
           <div className='wrapper'>
