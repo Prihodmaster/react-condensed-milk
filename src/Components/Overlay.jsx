@@ -20,7 +20,7 @@ function Overlay(props){
                 <button onClick={()=>{
                   props.onCloseCart(false)
                   props.orderChange()
-                  }}>⮜ Вернуться назад</button>
+                  }}>← Вернуться назад</button>
               </div>:
               (
                 props.data.length == 0 ? 
@@ -28,7 +28,7 @@ function Overlay(props){
                   <img src="/images/cart-empty.png" alt="лого" />
                   <p><b>Корзина пустая</b></p>
                   <p>Добавьте хотя бы одну баночку сгущёнки, чтобы сделать заказ</p>
-                  <button onClick={()=>props.onCloseCart(false)}> Вернуться назад</button>
+                  <button onClick={()=>props.onCloseCart(false)}>← Вернуться назад</button>
                 </div>
                 :
                 <>
@@ -37,7 +37,7 @@ function Overlay(props){
                   </div>
                   <div className='cart-order'>
                     <div className='cart-order-text'><p>Общая сумма:</p><b>{props.sum} грн.</b></div>
-                    <button onClick={props.clearCart}>Оформить заказ</button>
+                    <button onClick={props.clearCart}>Оформить заказ →</button>
                   </div>
                 </>
               )
