@@ -6,7 +6,7 @@ function Slider (){
     const [slide, setSlide] = useState(position);
 
     useEffect(()=>{
-        sliderRight = setTimeout(arrowRightClick, 3000)
+        sliderRight = setTimeout(arrowRightClick, 10000)
     })
 
     const arrowLeftClick = ()=> {
