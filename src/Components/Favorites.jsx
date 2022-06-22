@@ -9,12 +9,12 @@ function Favorites(props){
                     <img src="/images/smile2.png" alt="лого" />
                     <p><b>У вас нет ничего в избранном</b></p>
                     <p>Добавьте хотя бы одну баночку в избранное</p>
-                    <button onClick={()=>props.onOpenHome(true)}>⮜ Вернуться назад</button>
+                    <button onClick={()=>props.onOpenHome(true)}>← Вернуться назад</button>
                 </div> : 
                 <div>
                     <div className="milk-list-header">
                         <div className="milk-list-text">
-                            <button onClick={()=>props.onOpenHome(true)}>⮜</button>
+                            <button onClick={()=>props.onOpenHome(true)}>←</button>
                             <h2> Избранные товары</h2>
                         </div>
                     </div>

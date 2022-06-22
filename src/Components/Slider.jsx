@@ -1,18 +1,21 @@
 import React, {useState, useEffect} from 'react';
 
 const position = 0;
+let sliderRight;
 function Slider (){
     const [slide, setSlide] = useState(position);
 
     useEffect(()=>{
-        setTimeout(arrowRightClick, 10000)
-    }, [])
+        sliderRight = setTimeout(arrowRightClick, 3000)
+    })
 
     const arrowLeftClick = ()=> {
+        clearTimeout(sliderRight)
         setSlide(slide+20)
         slide===0 && setSlide(-80)
     }
     const arrowRightClick = ()=> {
+        clearTimeout(sliderRight)
         setSlide(slide-20)
         slide===-80 && setSlide(0)
     }
